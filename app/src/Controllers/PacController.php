@@ -15,7 +15,7 @@ class PacController extends Controller{
         $this->config=$this->container['config'];
         $this->bigquery=$this->container['bigquery']($this->config->google('bigquery'));
         $this->modules['pac']=$this->container['pac']($this->bigquery);
-        //$this->views=$this->container['views'];
+        $this->views=$this->container['views'];
 
 
     }
@@ -23,8 +23,7 @@ class PacController extends Controller{
     public function countByDate($request,$response,$args){
 
         $index=$this->modules['pac']->countByDate();
-        print_r($index);
-        //return $this->views->render($response, 'index.phtml', $index);
+        return $this->views->render($response, 'index.phtml', $index);
 
 
     }
