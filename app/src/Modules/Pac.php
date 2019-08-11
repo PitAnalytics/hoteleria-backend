@@ -24,7 +24,7 @@ GROUP BY
 ORDER BY
   XML.BUSINESS_DATE";
 
-  $result=$this->bigQuery->query($query);
+  $result=$this->bigquery->query($query);
 
   return $result;
 
