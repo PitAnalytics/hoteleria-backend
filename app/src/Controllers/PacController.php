@@ -22,10 +22,10 @@ class PacController extends Controller{
 
         $index=$this->modules['pac']->index();
 
-        $response1 = $response->withJson($index,201);
+        /*$response1 = $response->withJson($index,201);
         $response2 = $response1
         ->withHeader('Access-Control-Allow-Origin', '*')
-        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');*/
 
     }
 
