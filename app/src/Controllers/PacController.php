@@ -33,7 +33,7 @@ class PacController extends Controller{
 
     public function date($request,$response,$args){
 
-        $index=$this->modules['pac']->index();
+        $index=$this->modules['pac']->date();
 
         $response1 = $response->withJson($index,201);
         $response2 = $response1
