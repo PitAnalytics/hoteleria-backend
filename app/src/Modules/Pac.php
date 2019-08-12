@@ -38,5 +38,20 @@ class Pac extends Connection{
 
   }
 
+  public function date(){
+
+    $query="SELECT
+    DISTINCT(BUSINESS_DATE) AS BUSINESS_DATE
+  FROM
+    `pit-analytics-2019.PIT_SISTEMAS.PAC_2018_XML`
+  ORDER BY
+    BUSINESS_DATE";
+
+  $result=$this->bigquery->query($query);
+
+  return $result;
+
+  }
+
 }
 ?>
