@@ -8,8 +8,7 @@ class Pac extends Connection{
     
   public function index(){
 
-    $query=
-    "SELECT
+    $query="SELECT
     BUSINESS_DATE,
     BILL_NO,
     NET_AMOUNT,
