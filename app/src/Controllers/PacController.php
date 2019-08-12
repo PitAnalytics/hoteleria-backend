@@ -24,10 +24,7 @@ class PacController extends Controller{
 
         $index=$this->modules['pac']->countByDate();
 
-
-        print_r($index);
-
-        //return $this->views->render($response, 'index.phtml', [$index]);
+        return $this->views->render($response, 'index.phtml', [$index]);
 
     }
 
