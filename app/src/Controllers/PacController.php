@@ -22,8 +22,8 @@ class PacController extends Controller{
 
     public function countByDate($request,$response,$args){
 
-        $index=$this->modules['pac']->countByDate();
-        
+        $index=$this->modules['pac']->index();
+
         //respuesta con cabeceras http
         $response1 = $response->withJson($index,201);
         $response2 = $response1
