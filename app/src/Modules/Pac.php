@@ -53,5 +53,42 @@ class Pac extends Connection{
 
   }
 
+  public function billNo(){
+
+    $query="SELECT
+    DISTINCT(BILL_NO)
+  FROM (
+    SELECT
+      BUSINESS_DATE,
+      BILL_NO,
+      NET_AMOUNT,
+      'XML' AS DATA_SOURCE
+    FROM
+      `pit-analytics-2019.PIT_SISTEMAS.PAC_2018_XML`
+    WHERE
+      BILL_NO IN (
+      SELECT
+        DISTINCT(BILL_NO)
+      FROM
+        `pit-analytics-2019.PIT_SISTEMAS.PAC_GROUP`)
+    UNION ALL
+    SELECT
+      BUSINESS_DATE,
+      BILL_NO,
+      NET_AMOUNT,
+      'OPERA' AS DATA_SOURCE
+    FROM
+      `pit-analytics-2019.PIT_SISTEMAS.Pac_2018_Lte`
+    ORDER BY
+      BUSINESS_DATE)
+  ORDER BY
+    BILL_NO";
+
+  $result=$this->bigquery->query($query);
+
+  return $result;
+
+  }
+
 }
 ?>
