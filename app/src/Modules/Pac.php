@@ -90,5 +90,17 @@ class Pac extends Connection{
 
   }
 
+
+  public function dataSource(){
+
+    $source=[
+      0=>['DATA_SOURCE'=>'XML'],
+      1=>['DATA_SOURCE'=>'OPERA']
+    ];
+
+  return $source;
+
+  }
+
 }
 ?>
