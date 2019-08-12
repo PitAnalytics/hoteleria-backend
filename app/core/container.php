@@ -37,7 +37,7 @@ $container['pac']=function($container){
 };
 $container['views']=function($container){
 
-    return new \Slim\Views\Twig('../app/src/Views');
+    return new \Slim\Views\Twig('../app/src/Views',['cache'=>false]);
 
 };
 //
