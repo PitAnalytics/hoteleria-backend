@@ -24,7 +24,7 @@ require_once '../app/core/container.php';
 /******************/
 //
 $app->get('/', \App\Controllers\TestController::class.':wellcome');
-$app->get('/pac', \App\Controllers\PacController::class.':index');
+$app->get('/qlik/pac', \App\Controllers\PacController::class.':index');
 //
 /******************/
 /****EJECUTAMOS****/
