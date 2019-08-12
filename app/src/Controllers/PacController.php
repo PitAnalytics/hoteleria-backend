@@ -15,8 +15,6 @@ class PacController extends Controller{
         $this->config=$this->container['config'];
         $this->bigquery=$this->container['bigquery']($this->config->google('bigquery'));
         $this->modules['pac']=$this->container['pac']($this->bigquery);
-        //$this->views=$this->container['views'];
-
 
     }
 
