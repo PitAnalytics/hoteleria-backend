@@ -18,7 +18,7 @@ class PacController extends Controller{
 
     }
 
-    public function countByDate($request,$response,$args){
+    public function index($request,$response,$args){
 
         $index=$this->modules['pac']->index();
 
